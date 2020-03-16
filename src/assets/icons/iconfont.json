@@ -1,0 +1,51 @@
+{
+  "id": "1692207",
+  "name": "cmeb",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "437969",
+      "name": "icon-code",
+      "font_class": "code",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "3206572",
+      "name": "icon-phone",
+      "font_class": "phone",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "12024903",
+      "name": "yingyongchengxu",
+      "font_class": "ingyongchengxu-xianxing",
+      "unicode": "f4a2",
+      "unicode_decimal": 62626
+    },
+    {
+      "icon_id": "5449512",
+      "name": "采购员",
+      "font_class": "caigou-xianxing",
+      "unicode": "e7f8",
+      "unicode_decimal": 59384
+    },
+    {
+      "icon_id": "7613712",
+      "name": "yonghu1",
+      "font_class": "yonghu1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "12591996",
+      "name": "shouye-xianxing",
+      "font_class": "shouye-xianxing",
+      "unicode": "fb04",
+      "unicode_decimal": 64260
+    }
+  ]
+}
