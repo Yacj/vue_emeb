@@ -54,7 +54,7 @@
                 </router-link>
             </div>
         </div>
-
+        <Tabbar :active="0"></Tabbar>
         <HoverButton></HoverButton>
     </div>
 </template>
@@ -63,10 +63,11 @@
     import {homeService} from '../api/home/home'
     import HoverButton from "../components/HoverButton/HoverButton";
     import Banner from "../components/banner/banner";
+    import Tabbar from "../components/Tabbar/Tabbar";
 
     export default {
         name: 'Home',
-        components: {Banner, HoverButton},
+        components: {Tabbar, Banner, HoverButton},
         data() {
             return {
                 bannerList: [],

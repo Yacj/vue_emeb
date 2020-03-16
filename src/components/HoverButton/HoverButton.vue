@@ -27,16 +27,12 @@
                  alt=""
             >
         </div>
-        <Tabbar :active="0"></Tabbar>
     </div>
 </template>
 
 <script>
-    import Tabbar from "../Tabbar/Tabbar";
-
     export default {
         name: "HoverButton",
-        components: {Tabbar},
         data() {
             return {
                 top: "",
