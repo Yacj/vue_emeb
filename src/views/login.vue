@@ -25,7 +25,7 @@
                                         <svg class="icon" aria-hidden="true">
                                             <use xlink:href="#icon-code"></use>
                                         </svg>
-                                        <input type="text" placeholder="填写登录密码" required="required" v-model="password">
+                                        <input type="password" placeholder="填写登录密码" required="required" v-model="password">
                                     </div>
                                 </div>
                                 <div class="forgetPwd">
@@ -217,7 +217,7 @@
         }
     }
 </script>
-<style scoped lang="scss">
+<style  lang="scss">
     .icon {
         width: 1em;
         height: 1em;
@@ -225,7 +225,9 @@
         fill: currentColor;
         overflow: hidden;
     }
-
+    .van-hairline--top-bottom::after, .van-hairline-unset--top-bottom::after{
+        border-width:0 !important; ;
+    }
     #login {
         .register {
             background-image: linear-gradient(180deg, #eb5447 0, #ff8e3b);

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 const originalPush = VueRouter.prototype.push
 
 VueRouter.prototype.push = function push(location, onResolve, onReject) {
@@ -23,30 +24,38 @@ const routes = [
         component: () => import('../views/Home')
     },
     {
-        path:'/cart',
-        name:'cart',
-        meta:{
-            title:"购物车",
-            needLogin: true
+        path: '/category',
+        name: 'category',
+        meta: {
+            title: '商品分类'
         },
-        component:()=>import('../views/cart')
+        component: () => import('../views/category')
     },
     {
-        path:'/user',
-        name:'user',
-        meta:{
-            title:'我的',
+        path: '/cart',
+        name: 'cart',
+        meta: {
+            title: "购物车",
             needLogin: true
         },
-        component:()=>import('../views/user')
+        component: () => import('../views/cart')
     },
     {
-        path:'/login',
-        name:'login',
-        meta:{
-            title:'登录/注册'
+        path: '/user',
+        name: 'user',
+        meta: {
+            title: '我的',
+            needLogin: true
         },
-        component:()=>import('../views/login')
+        component: () => import('../views/user')
+    },
+    {
+        path: '/login',
+        name: 'login',
+        meta: {
+            title: '登录/注册'
+        },
+        component: () => import('../views/login')
     },
     {
         path: "*",

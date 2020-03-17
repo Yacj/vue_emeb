@@ -6,7 +6,9 @@ import { Grid, GridItem } from 'vant';
 import { Loading } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { Toast } from 'vant';
+import { TreeSelect } from 'vant';
 
+Vue.use(TreeSelect);
 Vue.use(Toast)
 Vue.use(Tab);
 Vue.use(Tabs);
