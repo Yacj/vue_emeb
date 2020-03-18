@@ -54,6 +54,14 @@
                 </router-link>
             </div>
         </div>
+        <div class="wrapper">
+            <div class="title acea-row row-between-wrapper">
+                <div class="text">
+                    <div class="name">快速选择</div>
+                    <div class=""></div>
+                </div>
+            </div>
+        </div>
         <Tabbar :active="0"></Tabbar>
         <HoverButton></HoverButton>
     </div>

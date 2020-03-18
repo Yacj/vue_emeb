@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5091604",
+      "name": "01装饰线",
+      "font_class": "zhuangshixian",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
       "icon_id": "437969",
       "name": "icon-code",
       "font_class": "code",

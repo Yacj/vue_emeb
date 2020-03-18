@@ -23,6 +23,10 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
+/*rem*/
+import './assets/js/rem'
+
+
 import {cookie} from "./assets/js/util";
 
 router.beforeEach((to, from, next) => {
