@@ -50,6 +50,24 @@ const routes = [
         component: () => import('../views/user')
     },
     {
+        path: '/user/add_manage',
+        name: 'add_manage',
+        meta: {
+            title: '地址列表',
+            needLogin: true
+        },
+        component: () => import('../views/addmanage')
+    },
+    {
+        path: '/user/addAddress',
+        name: 'addAddress',
+        meta: {
+            title: '添加地址',
+            needLogin: true
+        },
+        component: () => import('../views/addAddress')
+    },
+    {
         path: '/login',
         name: 'login',
         meta: {
@@ -57,6 +75,7 @@ const routes = [
         },
         component: () => import('../views/login')
     },
+
     {
         path: "*",
         name: "not-defined",

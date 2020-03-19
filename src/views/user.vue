@@ -168,6 +168,10 @@
             },
             setting() {
                 console.log('23')
+            },
+            goPages(index){
+                console.log(index)
+                this.$router.push({ path: this.MyMenus[index].wap_url });
             }
         },
         component: {

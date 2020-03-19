@@ -1,7 +1,11 @@
 <template>
     <div id="loading">
-        <div class="loading">
-            <span>loading...</span>
+        <div>
+            <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="loading-text">正在加载页面</div>
+            </div>
         </div>
     </div>
 </template>
@@ -21,68 +25,73 @@
     }
 </script>
 <style scoped lang="scss">
-    #loading {
+#loading{
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    z-index: 10000;
+    background: #fff;
+    >div{
+        height: 100%;
         width: 100%;
-        height: 100vh;
-        display: flex;
         justify-content: center;
+        display: flex;
         align-items: center;
-        background: #34495e;
-        margin: 0;
-        padding: 0;
-        font-family: "montserrat", sans-serif;
+        flex-direction: column;
     }
-
-    .loading {
-        width: 200px;
-        height: 200px;
-        box-sizing: border-box;
-        border-radius: 50%;;
-        border-top: 10px solid #e7473c;
-        animation: loading1 2s linear infinite;
-        position: relative;
-    }
-
-    .loading:before, .loading:after {
-        content: "";
+    .loader{
         position: absolute;
-        left: 0;
-        top: -10px;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        box-sizing: border-box;
-    }
-
-    .loading:before {
-        border-top: 10px solid #e67e22;
-        transform: rotate(120deg);
-    }
-
-    .loading:after {
-        border-top: 10px solid #3498db;
-        transform: rotate(240deg);
-    }
-
-    .loading span {
-        position: absolute;
-        width: 200px;
-        height: 200px;
+        width: 100%;
         text-align: center;
-        line-height: 200px;
-        color: #fff;
-        animation: loading2 2s linear infinite;
-    }
-
-    @keyframes loading1 {
-        to {
-            transform: rotate(360deg);
+        top: 40%;
+        .dot{
+            width: 8px;
+            height: 8px;
+            background: #0c83cc;
+            border-radius: 100%;
+            display: inline-block;
+            margin-left: 8px;
+            animation: slide 1s infinite;
+            &:nth-child(1){
+                animation-delay: 0.3s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.6s;
+            }
+        }
+        .loading-text{
+            font-size: 14px;
+            padding-left: 5px;
+            color: #6b6b6b;
         }
     }
-
-    @keyframes loading2 {
-        to {
-            transform: rotate(-360deg);
-        }
+}
+@-webkit-keyframes slide {
+    0% {
+        transform: scale(1);
     }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 </style>
