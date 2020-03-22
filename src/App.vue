@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
       <loading v-show="LOADING"></loading>
       <router-view/>
   </div>

@@ -75,7 +75,14 @@ const routes = [
         },
         component: () => import('../views/login')
     },
-
+    {
+      path:'/search',
+      name:'search',
+      meta:{
+          title:'商品搜索'
+      },
+      component:()=>import('../views/search')
+    },
     {
         path: "*",
         name: "not-defined",

@@ -1,7 +1,9 @@
 @import './normalize.css';
 
 @charset "utf-8";
-
+[v-cloak] {
+  display: none !important;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;

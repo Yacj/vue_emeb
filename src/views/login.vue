@@ -32,9 +32,7 @@
                                     <van-icon name="question-o"/>
                                     忘记密码？
                                 </div>
-                                <div class="logon" @click="submit">
-                                    登录
-                                </div>
+                                <van-button block round @click="submit" class="logon" :disabled="isLogin === false">登录</van-button>
                             </div>
                         </van-tab>
                         <van-tab title="快速登录">
@@ -68,9 +66,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="logon">
-                                    登录
-                                </div>
+                                <van-button block round  class="logon" > 登录</van-button>
                             </div>
                         </van-tab>
                     </van-tabs>
@@ -214,6 +210,11 @@
         },
         component: {
             //someComponent
+        },
+        computed:{
+            isLogin(){
+                return this.account!==""&&this.password!==""
+            }
         }
     }
 </script>
@@ -327,12 +328,7 @@
                 .logon {
                     font-size: .34rem;
                     color: #fff;
-                    font-weight: 700;
-                    height: .86rem;
-                    border-radius: .43rem;
                     background: linear-gradient(90deg, #f35447 0, #ff8e3c);
-                    text-align: center;
-                    line-height: .86rem;
                     margin-top: .47rem;
                 }
 

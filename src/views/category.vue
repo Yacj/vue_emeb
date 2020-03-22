@@ -16,7 +16,10 @@
                     :main-active-index.sync="items.activeId"
                     @click-nav="onNavClick">
                 <template slot="content">
-                    <div class="conter">
+                    <div  v-if="itemsList.length <= 0">
+                        <van-loading size="24px">加载中...</van-loading>
+                    </div>
+                    <div class="conter" v-if="itemsList.length > 0">
                         <div class="listw">
                             <div class="list acea-row">
                                 <router-link class="item acea-row row-column row-middle"
@@ -60,6 +63,7 @@
         mounted() {
             this.getcategory()
             this.categoryList()
+            console.log(this.itemsList.length)
         },
         methods: {
             async getcategory() {

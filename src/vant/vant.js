@@ -8,7 +8,9 @@ import { Tab, Tabs } from 'vant';
 import { Toast } from 'vant';
 import { TreeSelect } from 'vant';
 import { AddressList } from 'vant';
+import { Search } from 'vant';
 
+Vue.use(Search);
 Vue.use(AddressList);
 Vue.use(TreeSelect);
 Vue.use(Toast)

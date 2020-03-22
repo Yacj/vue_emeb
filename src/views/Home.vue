@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home" v-cloak>
         <div class="header acea-row row-center-wrapper">
             <router-link to="search" class="search acea-row row-middle">
             <span class="icon">
@@ -62,6 +62,7 @@
                 </div>
             </div>
         </div>
+
         <Tabbar :active="0"></Tabbar>
         <HoverButton></HoverButton>
     </div>
